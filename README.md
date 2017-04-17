@@ -9,11 +9,22 @@ Connect one side of a simple momentary normally open switch to GPIO3 (physical p
 
 No additional hardware is required as GPIO3 has a physical pullup resistor.
 
-# Automatically run at boot
+# Automatic Installation
+NOTE - this is a VERY simple script that makes a LOT of assumptions including that you MUST be the user pi. USE AT YOUR OWN RISK!
+
+Assuming you are the user *pi*, you can use the automatic installation script by running the following from the project directory.
+
+    sh install.sh
+    
+This will copy the script to your home directory and insert the entry into /etc/rc.local file to run this in the background.
+
+# Manual Installation
 Copy the script into your home directory and add the following line immediately before the exit line in /etc/rc.local including the "&" to ensure this script runs in the background at startup.
 
     python /home/pi/shutdown.py &
     
+Note that this script and installation example assumes you are the user *pi* with authority to run sudo with no password.
+
 Example /etc/rc.local file with line inserted.
 
     #!/bin/sh -e

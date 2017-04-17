@@ -5,9 +5,16 @@ The script supports
 * Press and release for safe system reboot
 * Press and hold for 3 seconds for safe system shutdown
 
-Connect one side of a simple momentary normally open switch to GPIO3 (physical pin 5) on the Raspberry Pi 2/3 and zero models and the other side to ground - such as physical pin 6 or any other ground pin.
+To support Startup after shutdown (Wake from Halt) connect one side of a simple momentary normally open switch to GPIO3 (physical pin 5) on the Raspberry Pi 2/3 and zero models and the other side to ground - such as physical pin 6 or any other ground pin.
+
+More information on this Wake from Halt function can be found at http://elinux.org/RPI_safe_mode#cite_note-1
 
 No additional hardware is required as GPIO3 has a physical pullup resistor.
+
+# Download
+Download a local copy of the project from the Git website or as follows from the command line:
+
+    git clone http://elinux.org/RPI_safe_mode#cite_note-1
 
 # Automatic Installation
 NOTE - this is a VERY simple script that makes a LOT of assumptions including that you MUST be the user pi. **USE AT YOUR OWN RISK!**

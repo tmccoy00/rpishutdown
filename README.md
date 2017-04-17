@@ -1,7 +1,7 @@
 # rpishutdown
 Raspberry Pi Single Shutdown Reboot and Startup Button
 
-The script supports
+This script supports
 * Press and release for safe system reboot
 * Press and hold for 3 seconds for safe system shutdown
 

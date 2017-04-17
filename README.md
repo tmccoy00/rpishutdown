@@ -1,20 +1,20 @@
 # rpishutdown
-Raspberry Pi Shutdown Reboot and Startup Button
+Raspberry Pi Single Shutdown Reboot and Startup Button
 
 The script supports
 * Press and release for safe system reboot
 * Press and hold for 3 seconds for safe system shutdown
 
-To support Startup after shutdown (Wake from Halt) connect one side of a simple momentary normally open switch to GPIO3 (physical pin 5) on the Raspberry Pi 2/3 and zero models and the other side to ground - such as physical pin 6 or any other ground pin.
+While this script can be used with any GPIO pin, to support startup after shutdown (Wake from Halt) connect one side of a simple momentary normally open switch to GPIO3 (physical pin 5) on the Raspberry Pi 2/3 and Zero models and the other side to ground - such as physical pin 6 or any other ground pin.
 
 More information on this Wake from Halt function can be found at http://elinux.org/RPI_safe_mode#cite_note-1
 
-No additional hardware is required as GPIO3 has a physical pullup resistor.
+No additional hardware other than a basic button is required as GPIO3 also has a physical pullup resistor.
 
 # Download
 Download a local copy of the project from the Git website or as follows from the command line:
 
-    git clone http://elinux.org/RPI_safe_mode#cite_note-1
+    git clone https://github.com/tmccoy00/rpishutdown.git
 
 # Automatic Installation
 NOTE - this is a VERY simple script that makes a LOT of assumptions including that you MUST be the user pi. **USE AT YOUR OWN RISK!**
@@ -26,7 +26,11 @@ Assuming you are the user *pi*, you can use the automatic installation script by
 This will copy the script to your home directory and insert the entry into /etc/rc.local file to run this in the background.
 
 # Manual Installation
-Copy the script into your home directory and add the following line immediately before the exit line in /etc/rc.local including the "&" to ensure this script runs in the background at startup.
+Assuming you are the user *pi*, copy the script into your home directory.
+
+    cp shutdown.py /home/pi/
+
+Add the following line in */etc/rc.local* immediately before the line with *exit*. Be sure to include the "&" as this script runs in the background at startup.
 
     python /home/pi/shutdown.py &
     

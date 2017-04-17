@@ -10,7 +10,7 @@ Connect one side of a simple momentary normally open switch to GPIO3 (physical p
 No additional hardware is required as GPIO3 has a physical pullup resistor.
 
 # Automatic Installation
-NOTE - this is a VERY simple script that makes a LOT of assumptions including that you MUST be the user pi. USE AT YOUR OWN RISK!
+NOTE - this is a VERY simple script that makes a LOT of assumptions including that you MUST be the user pi. **USE AT YOUR OWN RISK!**
 
 Assuming you are the user *pi*, you can use the automatic installation script by running the following from the project directory.
 

@@ -18,7 +18,9 @@ Download a local copy of the project from the Git website or as follows from the
 
 # Automatic Installation
 **USE AT YOUR OWN RISK!**
+
 NOTE - this is a VERY simple script that makes a LOT of assumptions including that you MUST be the user pi. 
+
 **USE AT YOUR OWN RISK!**
 
 Assuming you are the user *pi*, you can use the automatic installation script by running the following from the project directory.

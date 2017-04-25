@@ -16,27 +16,10 @@ Download a local copy of the project from the Git website or as follows from the
 
     git clone https://github.com/tmccoy00/rpishutdown.git
 
-# Automatic Installation
-**USE AT YOUR OWN RISK!**
-
-NOTE - this is a VERY simple script that makes a LOT of assumptions including that you MUST be the user pi. 
-
-**USE AT YOUR OWN RISK!**
-
-Assuming you are the user *pi*, you can use the automatic installation script by running the following from the project directory.
-
-    sh install.sh
-    
-This will copy the script to your home directory and insert the entry into /etc/rc.local file to run this in the background.
-
 # Manual Installation
-Assuming you are the user *pi*, copy the script into your home directory.
+Assuming you are the user *pi*,  add the following line in */etc/rc.local* immediately before the line with *exit 0*. Be sure to include the "&" as this script runs in the background at startup.
 
-    cp shutdown.py /home/pi/
-
-Add the following line in */etc/rc.local* immediately before the line with *exit*. Be sure to include the "&" as this script runs in the background at startup.
-
-    python /home/pi/shutdown.py &
+    python /home/pi/rpishutdown/shutdown.py &
     
 Note that this script and installation example assumes you are the user *pi* with authority to run sudo with no password.
 
